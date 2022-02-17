@@ -33,6 +33,20 @@
         "mode": 420
       },
       {
+        "path": "/etc/profile.d/systemd-pager.sh",
+        "contents": {
+          "source": "data:,%23%20Tell%20systemd%20to%20not%20use%20a%20pager%20when%20printing%20information%0Aexport%20SYSTEMD_PAGER%3Dcat%0A"
+        },
+        "mode": 420
+      },
+      {
+        "path": "/etc/sysctl.d/20-silence-audit.conf",
+        "contents": {
+          "source": "data:,%23%20Raise%20console%20message%20logging%20level%20from%20DEBUG%20(7)%20to%20WARNING%20(4)%0A%23%20to%20hide%20audit%20messages%20from%20the%20interactive%20console%0Akernel.printk%3D4%0A"
+        },
+        "mode": 420
+      },
+      {
         "path": "/etc/modules-load.d/kubernetes.conf",
         "contents": {
           "source": "data:,8021q%0Abr_netfilter%0Aoverlay%0Asoftdog%0Aiptable_filter%0Aiptable_mangle%0Aiptable_nat%0Aiscsi_tcp%0Anf_nat%0Axt_REDIRECT%0Axt_owner%0A"
