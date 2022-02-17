@@ -1,0 +1,62 @@
+variant: fcos
+version: 1.4.0
+
+passwd:
+  users:
+    - name: core
+      ssh_authorized_keys:
+        - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBIybYL7vB8VpW0DyO73l7UNNmuxSmFtdMYTLdwaGaa2 firmansyah@nainggolan.id
+
+storage:
+  links:
+    - path: /etc/localtime
+      target: ../usr/share/zoneinfo/Asia/Jakarta
+
+  files:
+    - path: /etc/ssh/sshd_config.d/20-enable-passwords.conf
+      mode: 0644
+      contents:
+        inline: |
+          # Fedora CoreOS disables SSH password login by default.
+          # This file must sort before 40-disable-passwords.conf.
+          PasswordAuthentication yes
+    - path: /etc/modules-load.d/kubernetes.conf
+      mode: 0644
+      contents:
+        inline: |
+          8021q
+          br_netfilter
+          overlay
+          softdog
+          iptable_filter
+          iptable_mangle
+          iptable_nat
+          iscsi_tcp
+          nf_nat
+          xt_REDIRECT
+          xt_owner
+    - path: /etc/sysctl.d/99-kubernetes.conf
+      mode: 0644
+      contents:
+        inline: |
+        net.bridge.bridge-nf-call-iptables  = 1
+        net.bridge.bridge-nf-call-ip6tables = 1
+        net.ipv4.ip_forward                 = 1
+        net.ipv4.conf.all.forwarding		    = 1
+        #net.ipv6.conf.all.forwarding		    = 1
+        net.ipv6.conf.all.disable_ipv6      = 1
+        net.ipv6.conf.default.disable_ipv6  = 1
+    - path: /etc/systemd/system/k3s.service.d/11-cgroups.conf
+      mode: 0644
+      contents:
+        inline: |
+        [Service]
+        Delegate=yes
+        Slice=podruntime.slice
+    - path: /etc/NetworkManager/conf.d/99-kubernetes.conf
+      # Configure unamaged interface for NetworkManager
+      mode: 0644
+      contents:
+        inline: |
+          [keyfile]
+          unmanaged-devices=interface-name:cali*;interface-name:tunl*;interface-name:vxlan.calico;interface-name:cni*;interface-name:veth*;interface-name:flannel*
