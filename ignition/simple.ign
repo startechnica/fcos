@@ -20,6 +20,12 @@
           {
             "label": "swap",
             "sizeMiB": 8192
+          },
+          {
+            "label": "root",
+            "number": 4,
+            "resize": true,
+            "sizeMiB": 0
           }
         ]
       }
