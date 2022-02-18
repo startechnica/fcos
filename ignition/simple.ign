@@ -6,6 +6,7 @@
     "users": [
       {
         "name": "core",
+        "passwordHash": "$y$j9T$gNQo5arDMY14xAF5pozsS.$mhIMLYC3vDpk6VJX50yxwBGOPB4zlSs0GP3oqw20xU/",
         "sshAuthorizedKeys": [
           "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBIybYL7vB8VpW0DyO73l7UNNmuxSmFtdMYTLdwaGaa2 firmansyah@nainggolan.id"
         ]
@@ -58,26 +59,17 @@
         "mode": 420
       },
       {
+        "path": "/etc/systemd/system/crio.service.d/11-cgroups.conf",
+        "contents": {
+          "source": "data:,%5BService%5D%0ADelegate%3Dyes%0ASlice%3Dpodruntime.slice%0A"
+        },
+        "mode": 420
+      },
+      {
         "path": "/etc/NetworkManager/conf.d/99-kubernetes.conf",
         "contents": {
           "compression": "gzip",
           "source": "data:;base64,H4sIAAAAAAAC/2TMQQ4CIRBE0T1HIcEDaDyJcdFpCu3YlIkCmbn9ZLawfVX5jw/2Yo5n6KxCeSGnjGGK/93Y8CuiSJSKq4pbvE3YOn3Bsbnwcv71O2/KNTLQ3gsWFxIewxEAAP///Qwz3aMAAAA="
-        },
-        "mode": 420
-      },
-      {
-        "path": "/etc/yum.repos.d/devel_kubic_libcontainers_stable_cri-o.repo",
-        "contents": {
-          "compression": "gzip",
-          "source": "data:;base64,H4sIAAAAAAAC/7yOPU7EMBBGe5+CEor1sNAgS644AMWWCFmO/SlrxX+yJ0BujxLTLAeg+4o38967xyeiWdYpOBPD5EpmGzJaN53tFGFcC6fyIbJN0AesDljdwGrA6oDVWT49392/IvPbxbyYCzfY9CB4q9CtplPyYrIda4v6yly7IvLlK8divSwVua8dsrSZGmrpgUsL6DTkNOx0q6dfP40A2gvoTwCJuc7uCrfo8z4XbP+q3795y/YYycvvFOWCTSDvt14/ip8AAAD//1wI7RyNAQAA"
-        },
-        "mode": 420
-      },
-      {
-        "path": "/etc/yum.repos.d/devel_kubic_libcontainers_stable.repo",
-        "contents": {
-          "compression": "gzip",
-          "source": "data:;base64,H4sIAAAAAAAC/7SOv0rHQBCE+3uKK7Uwq50EUvkAgj+sRMLmbkyO3D9uN2reXhIL0d5uFmbn+1483hHHdZuCG2OYXMnKIaPJKMpTxKvJnDBczsM+IYIFYsubfa6iDZzsHHTZps6VRD/vtrJbeYbYqwdkfbyM9+Pl7F8b3SuGVtNN8mZiwdbisKhW6Yl8+cixsO9KRZZN0JU2U0MtErS0AKFTuafTuadf0j19W9MfJpm5zm6BW4e7I67Y/5t4DHhWPkPy3WeK3YrdIB91P9yarwAAAP//cgpctHwBAAA="
         },
         "mode": 420
       }
