@@ -6,10 +6,7 @@
     "users": [
       {
         "name": "core",
-        "passwordHash": "$y$j9T$gNQo5arDMY14xAF5pozsS.$mhIMLYC3vDpk6VJX50yxwBGOPB4zlSs0GP3oqw20xU/",
-        "sshAuthorizedKeys": [
-          "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBIybYL7vB8VpW0DyO73l7UNNmuxSmFtdMYTLdwaGaa2 firmansyah@nainggolan.id"
-        ]
+        "passwordHash": "$y$j9T$gNQo5arDMY14xAF5pozsS.$mhIMLYC3vDpk6VJX50yxwBGOPB4zlSs0GP3oqw20xU/"
       }
     ]
   },
@@ -47,7 +44,7 @@
         "path": "/etc/sysctl.d/99-kubernetes.conf",
         "contents": {
           "compression": "gzip",
-          "source": "data:;base64,H4sIAAAAAAAC/3zOMQrDMAwF0Dk9haGzDYWSrWcJSiQFgVCM47bXLwZlaALWIvg8+N+oprkIruQvGscFVKPkCrPSHsIrPG49Nzo8nOTPM0meeCtfKBjO9+eWzTiBanIttg7Doe7Oxj67KpS9bZpaeil1h8Tw1nqyzf0CAAD//5JKMl0VAQAA"
+          "source": "data:;base64,H4sIAAAAAAAC/3zOsQrDMAwE0Dn9CkFnGwolW78lKJEUBEIxjtv+fjG4Q1LqWw6ON5xziXNWWrlVcAkLmgVNBWfjHeABt0vPjQ1+nabXPWqaZMtvzATnHNyyuUQ0i02rr8NwUmNfXeHXke711FRX+AeJBZ9WjrjCTwAAAP//5zy9KRYBAAA="
         },
         "mode": 420
       },
