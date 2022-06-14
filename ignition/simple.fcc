@@ -33,6 +33,7 @@ storage:
           iptable_nat
           iscsi_tcp
           nf_nat
+          nvme_tcp
           xt_REDIRECT
           xt_owner
     - path: /etc/sysctl.d/99-kubernetes.conf
