@@ -36,18 +36,18 @@ storage:
           nvme_tcp
           xt_REDIRECT
           xt_owner
-    - path: /etc/sysctl.d/99-kubernetes.conf
+    - path: /etc/sysctl.d/98-kubernetes.conf
       mode: 0644
       contents:
         inline: |
         net.bridge.bridge-nf-call-iptables  = 1
         net.bridge.bridge-nf-call-ip6tables = 1
         net.ipv4.ip_forward                 = 1
-        net.ipv4.conf.all.forwarding		    = 1
+        net.ipv4.conf.all.forwarding        = 1
         #net.ipv6.conf.all.forwarding		    = 1
         net.ipv6.conf.all.disable_ipv6      = 1
         net.ipv6.conf.default.disable_ipv6  = 1
-        vm.nr_hugepages                     = 1024
+        vm.nr_hugepages                     = 1184
     - path: /etc/systemd/system/k3s.service.d/11-cgroups.conf
       mode: 0644
       contents:
