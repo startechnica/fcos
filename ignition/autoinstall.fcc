@@ -31,7 +31,7 @@ storage:
           set -x
           main() {
               ignition_file='/home/core/config.ign'
-              image_url='https://builds.coreos.fedoraproject.org/prod/streams/stable/builds/32.20201004.3.0/x86_64/fedora-coreos-32.20201004.3.0-metal.x86_64.raw.xz'
+              image_url='https://builds.coreos.fedoraproject.org/prod/streams/stable/builds/38.20230527.3.0/x86_64/fedora-coreos-38.20230527.3.0-metal.x86_64.raw.xz'
               firstboot_args='console=tty0'
               if [ -b /dev/sda ]; then
                   install_device='/dev/sda'
@@ -66,7 +66,7 @@ storage:
                 {
                   "name": "core",
                   "sshAuthorizedKeys": [
-                    "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCerzGGXd3Dg0Y4KDu8eIoGAGk+GdHJGWB6ye4p0AVBbWPbeSDS9yGh9iH3uA44YFhgqdkibHwDg3h/prXN//pcXkOlH53fotglMWY2OefF37gp/Q6FgNZ4sCeGjPU5Wtu2pzN+xbItolRAYmk+ePlezoawnRQdZeQnNjSEvdRE7dppS1WpvJXWx7Uhk5088iZsjrcfMIa2ZKz76jod5CvlDwAb1EkJGmojB5y/DWZI4s//mmgjW/XSSzncxUC7pbrrQ4MLGlz86a0VBzyz3B776p8NFf2yGr3FkVf1zpA00RJ8Oka7whJqXyKkTFmMstQg1ReeFbla68Rlp+TlIsKNx8BWXCDTqEO6jOhRhkhCHRWnGthpZa6YGX67ala4NHLyR7TZJJX95nff0EPd2uB5lr19vjB65+bd/tmkcAK7VT3SMxO9jgngYl4+8g06uUI9OZmpH49bHeoHdmybKeu+AtIaImtFZFnQgXau++Nzq730jenTinR+a5viZ+iP7M8= leonardo@devops.cr"
+                    "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCerzGGXd3Dg0Y4KDu8eIoGAGk+GdHJGWB6ye4p0AVBbWPbeSDS9yGh9iH3uA44YFhgqdkibHwDg3h/prXN//pcXkOlH53fotglMWY2OefF37gp/Q6FgNZ4sCeGjPU5Wtu2pzN+xbItolRAYmk+ePlezoawnRQdZeQnNjSEvdRE7dppS1WpvJXWx7Uhk5088iZsjrcfMIa2ZKz76jod5CvlDwAb1EkJGmojB5y/DWZI4s//mmgjW/XSSzncxUC7pbrrQ4MLGlz86a0VBzyz3B776p8NFf2yGr3FkVf1zpA00RJ8Oka7whJqXyKkTFmMstQg1ReeFbla68Rlp+TlIsKNx8BWXCDTqEO6jOhRhkhCHRWnGthpZa6YGX67ala4NHLyR7TZJJX95nff0EPd2uB5lr19vjB65+bd/tmkcAK7VT3SMxO9jgngYl4+8g06uUI9OZmpH49bHeoHdmybKeu+AtIaImtFZFnQgXau++Nzq730jenTinR+a5viZ+iP7M8= firmansyah@nainggolan.id"
                   ]
                 }
               ]
