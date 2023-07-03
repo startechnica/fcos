@@ -61,4 +61,4 @@ storage:
       contents:
         inline: |
           [keyfile]
-          unmanaged-devices=interface-name:cali*;interface-name:tunl*;interface-name:vxlan.calico;interface-name:cni*;interface-name:veth*;interface-name:flannel*
+          unmanaged-devices=interface-name:cali*;interface-name:tunl*;interface-name:vxlan.calico;interface-name:vxlan-v6.calico;interface-name:cni*;interface-name:veth*;interface-name:flannel*
