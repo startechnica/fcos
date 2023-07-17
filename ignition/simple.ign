@@ -52,20 +52,6 @@
         "mode": 420
       },
       {
-        "path": "/etc/systemd/system/k3s.service.d/11-cgroups.conf",
-        "contents": {
-          "source": "data:,%5BService%5D%0ADelegate%3Dyes%0ASlice%3Dpodruntime.slice%0A"
-        },
-        "mode": 420
-      },
-      {
-        "path": "/etc/systemd/system/crio.service.d/11-cgroups.conf",
-        "contents": {
-          "source": "data:,%5BService%5D%0ADelegate%3Dyes%0ASlice%3Dpodruntime.slice%0A"
-        },
-        "mode": 420
-      },
-      {
         "path": "/etc/NetworkManager/conf.d/99-kubernetes.conf",
         "contents": {
           "compression": "gzip",
