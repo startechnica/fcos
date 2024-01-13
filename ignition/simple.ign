@@ -44,14 +44,6 @@
         "mode": 420
       },
       {
-        "path": "/etc/sysctl.d/99-kubernetes.conf",
-        "contents": {
-          "compression": "gzip",
-          "source": "data:;base64,H4sIAAAAAAAC/3zOsQrDMAwE0Dn9CkFnGwolW78lKJEUBEIxjtv+fjG4Q1LqWw6ON5xziXNWWrlVcAkLmgVNBWfjHeABt0vPjQ1+nabXPWqaZMtvzATnHNyyuUQ0i02rr8NwUmNfXeHXke711FRX+AeJBZ9WjrjCTwAAAP//5zy9KRYBAAA="
-        },
-        "mode": 420
-      },
-      {
         "path": "/etc/NetworkManager/conf.d/99-kubernetes.conf",
         "contents": {
           "compression": "gzip",
