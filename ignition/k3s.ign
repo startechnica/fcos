@@ -1,0 +1,62 @@
+{
+  "ignition": {
+    "version": "3.3.0"
+  },
+  "passwd": {
+    "users": [
+      {
+        "name": "core",
+        "passwordHash": "$y$j9T$gNQo5arDMY14xAF5pozsS.$mhIMLYC3vDpk6VJX50yxwBGOPB4zlSs0GP3oqw20xU/",
+        "sshAuthorizedKeys": [
+          "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBIybYL7vB8VpW0DyO73l7UNNmuxSmFtdMYTLdwaGaa2 firmansyah@nainggolan.id"
+        ]
+      }
+    ]
+  },
+  "storage": {
+    "files": [
+      {
+        "path": "/etc/ssh/sshd_config.d/20-enable-passwords.conf",
+        "contents": {
+          "source": "data:,%23%20Fedora%20CoreOS%20disables%20SSH%20password%20login%20by%20default.%0A%23%20This%20file%20must%20sort%20before%2040-disable-passwords.conf.%0APasswordAuthentication%20yes%0A"
+        },
+        "mode": 420
+      },
+      {
+        "path": "/etc/profile.d/systemd-pager.sh",
+        "contents": {
+          "source": "data:,%23%20Tell%20systemd%20to%20not%20use%20a%20pager%20when%20printing%20information%0Aexport%20SYSTEMD_PAGER%3Dcat%0A"
+        },
+        "mode": 420
+      },
+      {
+        "path": "/etc/sysctl.d/20-silence-audit.conf",
+        "contents": {
+          "source": "data:,%23%20Raise%20console%20message%20logging%20level%20from%20DEBUG%20(7)%20to%20WARNING%20(4)%0A%23%20to%20hide%20audit%20messages%20from%20the%20interactive%20console%0Akernel.printk%3D4%0A"
+        },
+        "mode": 420
+      },
+      {
+        "path": "/etc/modules-load.d/kubernetes.conf",
+        "contents": {
+          "source": "data:,8021q%0Abr_netfilter%0Aoverlay%0Asoftdog%0Aiptable_filter%0Aiptable_mangle%0Aiptable_nat%0Aiscsi_tcp%0Anf_nat%0Axt_REDIRECT%0Axt_owner%0A"
+        },
+        "mode": 420
+      },
+      {
+        "path": "/etc/NetworkManager/conf.d/99-kubernetes.conf",
+        "contents": {
+          "compression": "gzip",
+          "source": "data:;base64,H4sIAAAAAAAC/2TMQQ4CIRBE0T1HIcEDaDyJcdFpCu3YlIkCmbn9ZLawfVX5jw/2Yo5n6KxCeSGnjGGK/93Y8CuiSJSKq4pbvE3YOn3Bsbnwcv71O2/KNTLQ3gsWFxIewxEAAP///Qwz3aMAAAA="
+        },
+        "mode": 420
+      }
+    ],
+    "links": [
+      {
+        "path": "/etc/localtime",
+        "target": "../usr/share/zoneinfo/Asia/Jakarta"
+      }
+    ]
+  }
+}
