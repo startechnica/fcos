@@ -6,6 +6,7 @@
     "users": [
       {
         "name": "core",
+        "passwordHash": "$y$j9T$BaBwrBZL4NW3vn/qSvN3H.$BltGT/Y3odSOTejN1l2V104Yg7IJMj5lWXu6Enjt5X.",
         "sshAuthorizedKeys": [
           "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBIybYL7vB8VpW0DyO73l7UNNmuxSmFtdMYTLdwaGaa2 firmansyah@nainggolan.id"
         ]
