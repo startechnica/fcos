@@ -6,7 +6,6 @@
     "users": [
       {
         "name": "core",
-        "passwordHash": "$y$j9T$gNQo5arDMY14xAF5pozsS.$mhIMLYC3vDpk6VJX50yxwBGOPB4zlSs0GP3oqw20xU/",
         "sshAuthorizedKeys": [
           "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBIybYL7vB8VpW0DyO73l7UNNmuxSmFtdMYTLdwaGaa2 firmansyah@nainggolan.id"
         ]
@@ -16,14 +15,6 @@
   "storage": {
     "files": [
       {
-        "path": "/etc/profile.d/systemd-pager.sh",
-        "contents": {
-          "compression": "",
-          "source": "data:,%23%20Tell%20systemd%20to%20not%20use%20a%20pager%20when%20printing%20information%0Aexport%20SYSTEMD_PAGER%3Dcat%0A"
-        },
-        "mode": 420
-      },
-      {
         "path": "/etc/ssh/sshd_config.d/20-enable-passwords.conf",
         "contents": {
           "compression": "",
@@ -32,10 +23,34 @@
         "mode": 420
       },
       {
+        "path": "/etc/modules-load.d/kubernetes.conf",
+        "contents": {
+          "compression": "",
+          "source": "data:,br_netfilter%0Aoverlay%0Asoftdog%0A"
+        },
+        "mode": 420
+      },
+      {
+        "path": "/etc/sysctl.d/98-kubernetes.conf",
+        "contents": {
+          "compression": "gzip",
+          "source": "data:;base64,H4sIAAAAAAAC/3zQzQrCMAzA8bN7ioLnFgpjeNmzlGz9MBCz0nXz9aVQkWnd/xIIv0MIu6ymhDa4OiR7OQORxJhhIrcKMQrdnbmhwrfDuPcKo/FLekKy4ruDmxf2CohU1cih4YaWu3zY9ddZXMtZpmz/Oes8bJSPtrj9oTiZ+xZchFB+0GgUWt/67hUAAP//UshLpUIBAAA="
+        },
+        "mode": 420
+      },
+      {
+        "path": "/etc/systemd/system/k3s.service.d/11-cgroups.conf",
+        "contents": {
+          "compression": "",
+          "source": "data:,%5BService%5D%0ADelegate%3Dyes%0ASlice%3Dpodruntime.slice%0A"
+        },
+        "mode": 420
+      },
+      {
         "path": "/etc/NetworkManager/conf.d/99-kubernetes.conf",
         "contents": {
           "compression": "gzip",
-          "source": "data:;base64,H4sIAAAAAAAC/3TOMQoCMRCF4X6PIsTSQvEkYjFmX+Kws0/JJlFvLwo2jrb/NwPvMOGR1HAcGmehZIxhRNeIZa+sKEkiAmXGNorpavcd6VsyIWGuT+2EoNe+OKmN/ryjnn28m3D9mhIvPy30zR++aUFuUsa3O82fz+EZAAD//662qqUUAQAA"
+          "source": "data:;base64,H4sIAAAAAAAC/3TOMQoCMRCF4X6PshBLC8WTiMUweYmDs0+ISdTbi4LNRtv/m4F3vOCZzHGaGhehZMQQ0U1xOxgrShJFoCzYqbjN+1WsjT7E/nDh5n2v158W+vYP360gNynx44Pm7+dalOO2jnoeYnIh4fP0CgAA//9gDy6A+gAAAA=="
         },
         "mode": 420
       }
